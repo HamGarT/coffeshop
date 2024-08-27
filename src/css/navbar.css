@@ -1,0 +1,26 @@
+@import url("./global.css");
+
+.navbar {
+  height:50px;
+  place-content: center;
+  width: 500px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: var(--shadow-elevation-medium);
+   
+}
+
+.navbar ul{
+    text-decoration: none;
+}
+.navbar ul li{
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 20px;
+}
+.navbar ul li a{
+    
+    text-decoration: none;
+}

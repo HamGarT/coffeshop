@@ -1,0 +1,157 @@
+@import url('fonts.css');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+body{
+    max-width: 100%;
+}
+
+#navbar-container{
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    padding: 20px 0;
+    
+}
+.logo{
+    position: absolute;
+    width: 250px;
+    top: 10px;
+    left: 40px;
+}
+
+#navbar-container.sticky{
+    position: sticky;
+    top: 10px;
+    
+}
+.home{
+    
+    background-image: url("../../public/homep7.jpg");
+    background-attachment: fixed;
+    height: 100vh;
+    max-width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    place-content: center;
+    
+}
+
+.home .home-content{
+    position: relative;
+    display: block;
+    display: flex;
+}
+
+.home .slogan {
+    /* border:2px solid;
+    border-color: black; */
+    position: relative;
+    place-content: center;
+    width: 50%;
+    
+    
+}
+
+.home .slogan .slogan-content{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+
+.home .slogan h1{
+    font-family: "Archivo Black", sans-serif;
+    font-size: 70px;
+    color: #333232;
+    
+}
+.home .slogan h1 span{
+    color: #c08664;
+}
+.home .slogan p{
+    font-family: "Inconsolata", monospace;
+    padding: 20px 0;
+}
+
+.home .image{
+   width: 50%;
+   place-content: center;
+   object-fit: cover;
+}
+.navbar-container{
+    width: 100%;
+    height: 100px;
+    border:2px solid;
+    /* border-color: black; */
+}
+
+
+.about{
+    max-width: 100vw;
+    display: flex;
+    margin-top: 40px;
+    padding: 0 40px;
+    font-family: "Inconsolata", monospace;
+    
+}
+
+.about .about-content > div{
+    height: 100vh;
+    place-content: center;
+    position: relative;
+}
+
+.about .about-image{
+    position: sticky;
+    top: 10px;
+    align-self: flex-start;
+    background-image: url('../../public/bcafe.png');
+    background-size: cover;
+    
+}
+
+.filled, .outline{
+    position: absolute;
+    top: 50%;
+    width: calc(100vw - 100px);
+    height: 400px;
+    background-image: url("../../public/Frame1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-50%);
+    
+}
+
+.outline {
+    background-image: url("../../public/Frame2.svg");
+    z-index: 999;
+}
+
+.filled1, .outline1{
+    position: absolute;
+    top: 50%;
+    width: calc(100vw - 100px);
+    height: 400px;
+    background-image: url("../../public/Frame4.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-50%);
+    
+}
+
+.outline1 {
+    background-image: url("../../public/Frame3.svg");
+    z-index: 999;
+}
+
+.about .caracteristics div{
+   margin: 70px 0;
+}
