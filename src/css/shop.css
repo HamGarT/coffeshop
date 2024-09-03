@@ -1,0 +1,42 @@
+@import url('./general.css');
+
+
+.products {
+    padding: 40px 0;
+
+}
+
+.grid-products {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   
+    gap: 10px;
+    margin: auto;
+    justify-items: center;
+   
+
+}
+
+.banner {
+    height: 400px;
+    width: 100%;
+    background-image: url('../../public/homep2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.coffee-item{
+    padding-bottom: 50px;
+    cursor: pointer;
+}
+.coffee-item img {
+    height: 500px;
+    width: 400px;
+    object-fit: cover;
+    background-color: rgb(247, 247, 247);
+}
+
+.coffee-item h3,
+.coffee-item span {
+    padding-top: 10px;
+    text-align: left;
+}
