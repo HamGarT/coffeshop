@@ -7,39 +7,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./src/css/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-  <title>CoffeShop</title>
+  <title>Don.Cofellio</title>
 </head>
  
   
 
 <body>
-  <!-- <div id="app"></div> -->
-
-
-
-  <div id="navbar-container"></div>
-
-
-  <section class="home">
-    <img class="logo" src="./public/logo.png" alt="" srcset="">
-    <div class="home-content">
-      <div class="slogan">
-        <div class="slogan-content">
+  
+  <header id="navbar-container"></header>
+  <section class="c-home">
+    <img class="c-home__logo" src="./public/logo.png" alt="" srcset="">
+    <div class="c-home__wrapper">
+      <div class="c-home__slogan-wrapper">
+        <div class="c-home__slogan">
           <h1>Cada taza cuenta una historia, <span>descubre el café perfecto</span> aquí.</h1>
           <p>Nosotros te damos variedad de unicos y buenos cafes.</p>
         </div>
       </div>
-      <div class="image">
+      <div class="c-home__image">
         <img src="./public/coffe1.png" alt="">
       </div>
     </div>
   </section>
-  <section class="about">
-    <div>
-
-    </div>
-
-    <div class="about-content">
+  <section class="c-about">
+    <div class="c-about__wrapper">
       <div>
         <div>
           <h2>Quienes somos?</h2>
@@ -55,8 +46,8 @@
         <div class="outline"></div>
       </div>
 
-      <div>
-        <div class="caracteristics">
+      <div class="c-about__caracteristics">
+        <div class="c-about__caracteristics-wrapper">
           <div>
             <img src="./src/icons/cafe.png" alt="" srcset="">
             <h2>La taza perfecta</h2>
@@ -81,9 +72,6 @@
               ut hic alias molestiae minus sit veritatis corrupti perferendis.
             </p>
           </div>
-
-
-
         </div>
 
         <div class="filled1"></div>
@@ -101,14 +89,12 @@
         <div class="filled"></div>
         <div class="outline"></div>
       </div>
-
-
     </div>
 
-    <div class="about-image">
+    <div class="c-about__image">
       <img src="./public/coffe(1).png" alt="">
     </div>
-    <div class="about-content">
+    <div class="c-about__wrapper">
 
       <div>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -119,7 +105,7 @@
           doloremque ullam vel dolores autem fugit aliquid.
         </p>
       </div>
-      <div class="caracteristics">
+      <div class="c-about__caracteristics-wrapper">
         <div>
           <img src="./src/icons/cafe.png" alt="" srcset="">
           <h2>Lo mejor para ti</h2>
@@ -160,36 +146,15 @@
 
 
     </div>
-
   </section>
   <section class="some-products">
 
   </section>
-
-  <section id="footer-container"></section>
-  
+  <footer id="footer-container"></footer>
+  <script src="./src/js/components.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Function to fetch and load HTML into the container
-      const loadHTML = (url, containerId) => {
-        fetch(url)
-          .then(response => response.text())
-          .then(data => {
-            const container = document.getElementById(containerId);
-            if (container) {
-              container.innerHTML = data;
-            } else {
-              console.error(`Element with ID ${containerId} not found.`);
-            }
-          })
-          .catch(error => console.error(`Error loading ${url}:`, error));
-      };
-  
-      // Load navbar and footer
-      loadHTML('./components/navbar.html', 'navbar-container');
-      loadHTML('./components/footer.html', 'footer-container');
-  
-      // Handle scroll event for sticky navbar
+
       const handleScroll = () => {
         const navbar = document.getElementById('navbar-container');
         if (navbar) {
@@ -201,7 +166,6 @@
         }
       };
   
-      // Throttle scroll event handler
       let isThrottled = false;
       window.addEventListener('scroll', () => {
         if (!isThrottled) {
@@ -209,7 +173,7 @@
           isThrottled = true;
           setTimeout(() => {
             isThrottled = false;
-          }, 100); // Adjust throttle delay as needed
+          }, 100); 
         }
       });
     });

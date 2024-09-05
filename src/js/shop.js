@@ -31,7 +31,7 @@ function generateHTML(data) {
 
         container.appendChild(coffeeItem);
         coffeeItem.addEventListener("click", ()=>{
-            alert("hola");
+            alert("COMPRAR: "+item.name);
         })
     });
 }

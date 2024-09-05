@@ -6,7 +6,7 @@ body{
     max-width: 100%;
 }
 
-.logo{
+.c-home__logo{
     position: absolute;
     width: 250px;
     top: 10px;
@@ -16,9 +16,10 @@ body{
 #navbar-container.sticky{
     position: sticky;
     top: 10px;
+
     
 }
-.home{
+.c-home{
     
     background-image: url("../../public/homep3.jpg");
     background-attachment: fixed;
@@ -30,23 +31,19 @@ body{
     
 }
 
-.home .home-content{
+.c-home__wrapper{
     position: relative;
-    display: block;
     display: flex;
 }
 
-.home .slogan {
-    /* border:2px solid;
-    border-color: black; */
+.c-home__slogan-wrapper {
     position: relative;
     place-content: center;
     width: 50%;
     
-    
 }
 
-.home .slogan .slogan-content{
+.c-home__slogan{
     position: absolute;
     width: 100%;
     top: 50%;
@@ -55,21 +52,21 @@ body{
 }
 
 
-.home .slogan h1{
+.c-home__slogan h1{
     font-family: "Archivo Black", sans-serif;
     font-size: 70px;
     color: #333232;
     
 }
-.home .slogan h1 span{
+.c-home__slogan h1 span{
     color: #c08664;
 }
-.home .slogan p{
+.c-home__slogan p{
     font-family: "Inconsolata", monospace;
     padding: 20px 0;
 }
 
-.home .image{
+.c-home__image {
    width: 50%;
    place-content: center;
    object-fit: cover;
@@ -82,7 +79,7 @@ body{
 }
 
 
-.about{
+.c-about{
     max-width: 100vw;
     display: flex;
     margin-top: 40px;
@@ -91,13 +88,13 @@ body{
     
 }
 
-.about .about-content > div{
+.c-about__wrapper > div{
     height: 100vh;
     place-content: center;
     position: relative;
 }
 
-.about .about-image{
+.c-about__image{
     position: sticky;
     top: 10px;
     align-self: flex-start;
@@ -140,6 +137,6 @@ body{
     z-index: 999;
 }
 
-.about .caracteristics div{
+.c-about__caracteristics-wrapper div{
    margin: 70px 0;
 }

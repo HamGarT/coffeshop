@@ -1,29 +1,29 @@
-.footer{
+.c-footer{
     background-color: #332828;
     height: 250px;
     position: relative;
     bottom: 0;
     
 }
-.footer h3,
-.footer ul li a,
-.copyright,
-.footer-socialmedia{
+.c-footer h3,
+.c-footer ul li a,
+.c-footer__copyright,
+.c-footer__socialmedia{
     color: #ffffff;
 }
-.footer-content{
+.c-footer__wrapper{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: center;
     height: calc(100% - 50px);
 }
-.footer ul {
+.c-footer ul {
     list-style: none;
     
 }
 
-.copyright{
+.c-footer__copyright{
     height: 50px;
     background-color: #57433a;
     place-content: center;
@@ -32,7 +32,7 @@
     width: 100%;
 }
 
-.footer-socialmedia i:not(:nth-child(2)){
+.c-footer__socialmedia i:not(:nth-child(2)){
     padding: 20px 25px;
 }
 
