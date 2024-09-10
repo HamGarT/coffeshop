@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Function to fetch and load HTML into the container
+  
     const loadHTML = (url, containerId) => {
       fetch(url)
         .then(response => response.text())

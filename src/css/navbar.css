@@ -11,7 +11,9 @@
   box-shadow: var(--shadow-elevation-medium);
    
 }
-
+.c-navbar ul {
+    margin-bottom: 0;
+}
 .c-navbar__menu{
     text-decoration: none;
 }

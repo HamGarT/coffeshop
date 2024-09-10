@@ -1,14 +1,30 @@
 @import url('./general.css');
 
+.overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(5px); 
+    z-index: 99;
+} 
 
-.products {
-    padding: 40px 0;
-
+.show {
+    display: block;
 }
 
-.grid-products {
+.c-products {
+    padding: 40px 0;
+    
+}
+
+.c-products__grid-products {
     width: 80%;
     display: grid;
+    min-height: 100vh;
     grid-template-columns: repeat(3, 1fr);   
     gap: 10px;
     margin: auto;
@@ -17,7 +33,7 @@
 
 }
 
-.banner {
+.c-banner {
     height: 400px;
     width: 100%;
     background-image: url('../../public/homep2.jpg');
@@ -39,4 +55,93 @@
 .coffee-item span {
     padding-top: 10px;
     text-align: left;
-}   
+}
+
+
+.c-products__buy-modal{
+    padding: 40px 40px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fdfdfd;
+    width: 60%;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+.c-products__images-wrapper{
+    padding: 0 20px;
+}
+
+.c-products__buy-modal .image{
+    width: 500px;
+    height: 400px;
+    background-color: rgb(243, 243, 243);
+}
+.c-products__buy-modal img{
+    padding: 0 20px;
+    width: 500px;
+    height: 400px;
+}
+
+.c-products__info-wrapper > p{
+    padding: 20px 0;
+    
+}
+
+.c-products__buttons {
+    padding: 20px 0;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.c-products__button-item{
+    padding: 20px 40px;
+    background-color: #ffff;
+    border: 2px solid #000;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 0px;
+    transition: background-color 1s;
+}
+.c-products__button-item:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+.c-products__button-item--black{
+    background-color: #000000;
+    color: #ffffff;
+}
+.c-products__button-item--black:hover{
+    background-color: #fdfdfd;
+    color: #000000;
+    
+}
+.c-products__stars{
+    margin-top: 10px;
+}
+
+.c-products__lastly-viewed{
+    display: flex;
+}
+.c-products__lastly-viewed-item{
+    height: 100px;
+    width: 150px;
+    background-color: rgb(243, 243, 243);
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.c-products__lastly-viewed-item img{
+    width: 100%;
+    height: 100%;
+}
+
+.c-products__acordion{
+    margin-top: 20px ;
+}

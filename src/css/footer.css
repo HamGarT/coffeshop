@@ -5,6 +5,9 @@
     bottom: 0;
     
 }
+.c-footer h3{
+    font-size: 15px;
+}
 .c-footer h3,
 .c-footer ul li a,
 .c-footer__copyright,
