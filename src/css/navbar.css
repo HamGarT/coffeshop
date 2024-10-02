@@ -1,4 +1,5 @@
 @import url("./global.css");
+@import url("./general.css");
 
 .c-navbar {
   height:50px;
@@ -9,6 +10,8 @@
   margin: 0 auto;
   text-align: center;
   box-shadow: var(--shadow-elevation-medium);
+  font-family:"Cabin", sans-serif;
+  color: black;
    
 }
 .c-navbar ul {
@@ -21,8 +24,14 @@
     display: inline-block;
     text-decoration: none;
     padding: 0 20px;
+    font-size: 1.15rem;
 }
 .c-navbar__item a{
-    
+    color: #000000;
     text-decoration: none;
+}
+
+.c-navbar__item a:visited{
+    
+    color: black;
 }

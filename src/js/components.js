@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Load navbar and footer
-    loadHTML('../../components/navbar.html', 'navbar-container');
-    loadHTML('../../components/footer.html', 'footer-container');
+    loadHTML('../src/components/navbar.html', 'navbar-container');
+    loadHTML('../src/components/footer.html', 'footer-container');
 
     // Handle scroll event for sticky navbar
     const handleScroll = () => {

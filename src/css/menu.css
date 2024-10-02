@@ -1,0 +1,145 @@
+@import url('./general.css');
+
+#navbar-container{
+    z-index: 999;
+}
+
+.c-menu{
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.c-menu .c-logo{
+    position: absolute;
+    width: 250px;
+    top: 10px;
+    left: 40px;
+
+}
+
+.c-menu__slogan{
+    height: 400px;
+    display: flex;
+    justify-content: end;
+    text-align: right;
+    align-content: center;
+    position: relative;
+    align-content: center;
+    padding: 80px;
+}
+
+.c-menu__slogan::before{
+    content: "";
+    height: 700px;
+    width: 900px;
+    clip-path: circle(50% at 49% 4%);
+    background-color: rgba(255, 153, 0, 0.123);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-40%);
+    top: -50px;
+}
+
+.c-menu__slogan-text-wrapper{
+   width: 600px;
+    z-index: 99;
+    
+}
+
+.c-menu__slogan-text-wrapper h2{
+    font-size: 3rem;
+    color: rgb(253, 135, 0);
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 900;
+}
+
+.c-menu__slider{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    
+    
+}
+.c-menu__slider-item{
+    background-color: #d8d7d2e7;
+    border-radius: 20px;
+    height: 500px;
+    width: 400px;
+    font-family: "Lexend", sans-serif;
+    color: rgb(139, 139, 139);
+    z-index: 9999;
+    text-align: center;
+    padding: 0 40px;
+    position: relative;
+    
+}
+
+.c-menu__slider-item h3 {
+    text-align: left;
+    font-weight: 900;
+    
+    font-size: 2.2rem;
+}
+
+.c-menu__slider-item:hover {
+    background-color: #c08664;
+    transform: scale(1.19);
+    transition: transform .5s;
+    box-shadow: -2px 9px 14px 0px rgba(0,0,0,0.27);
+    color: #fff;
+}
+
+.c-menu__slider-item:hover .c-menu__slider-item-button{
+    display: block;
+}
+
+.c-menu__slider-item-img-title-wraper {
+    width: 100%;
+   
+}
+
+.c-menu__slider-item-img-title-wraper img{
+    width: 300px;
+    max-height: 320px;
+    
+}
+
+.c-menu__slider-item-img-title-wraper{
+    transform: translateY(-30%);
+    height: 100%;
+    
+}
+
+.c-menu__slider-item-img-title-wraper ul li{
+    text-align: left;
+    list-style: none;
+    padding: 9px 0;
+    position: relative;
+}
+
+.c-menu__slider-item-img-title-wraper ul li::after{
+
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background-color: #cacaca;
+    bottom: 0;
+    left: 0;
+}
+
+.c-menu__slider-item-button{
+    width: 80%;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    background-color: #fff;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
