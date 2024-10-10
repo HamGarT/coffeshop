@@ -1,146 +1,251 @@
 @import url('./general.css');
 
+#navbar-container.sticky {
+    position: sticky;
+    top: 10px;
 
-html{
-    scroll-behavior: smooth;
 }
 
-body{
-    max-width: 100%;
+
+.arrow-link::after {
+    content: "";
+    background-image: url('../assets/images/Arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 53px;
+    width: calc(100% + 10px);
+    position: absolute;
+    bottom: -30px;
+    left: 0;
 }
 
-.c-home__logo{
+.arrow-link a {
+    text-decoration: none;
+    color: #7e7e7e;
+    letter-spacing: 3px;
+    font-size: 30px;
+}
+
+.c-aboutus,
+.c-weoffer,
+.some-products,
+.c-footer {
+    border-top: 1px solid black;
+}
+
+.c-home__logo {
     position: absolute;
     width: 250px;
     top: 10px;
     left: 40px;
 }
 
-#navbar-container.sticky{
-    position: sticky;
-    top: 10px;
-
-    
-}
-.c-home{
-    
-    background-image: url("../../public/homep3.jpg");
-    background-attachment: fixed;
+.c-home {
     height: 100vh;
-    max-width: 100vw;
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin-top: 0;
     place-content: center;
-    
+
 }
 
-.c-home__wrapper{
+.c-home__wrapper {
     position: relative;
     display: flex;
+    transform: translateY(100px);
+
 }
 
 .c-home__slogan-wrapper {
     position: relative;
-    place-content: center;
     width: 50%;
+
+}
+
+.c-home__slogan {
     
 }
 
-.c-home__slogan{
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%, -50%);
+
+.c-home__slogan h1 {
+
+    letter-spacing: 5px;
+    /* max-width: 700px; */
+    font-weight: 500;
+
 }
 
+.c-home__slogan p {
+    font-size: 30px;
+}
 
-.c-home__slogan h1{
-    font-family: "Archivo Black", sans-serif;
-    font-size: 70px;
-    color: #333232;
-    
-}
-.c-home__slogan h1 span{
-    color: #c08664;
-}
-.c-home__slogan p{
-    font-family: "Inconsolata", monospace;
-    padding: 20px 0;
+.c-home__slogan p>span {
+    color: rgb(255, 169, 57);
 }
 
 .c-home__image {
-   width: 50%;
-   place-content: center;
-   object-fit: cover;
-}
-#navbar-container{
-    width: 100%;
-    height: 100px;
-   
-    z-index: 999999;
-    /* border-color: black; */
+    width: 50%;
+    place-content: center;
+    object-fit: cover;
 }
 
+.c-home__image img {
+    width: 900px;
+}
 
-.c-about{
-    max-width: 100vw;
+.c-aboutus__wrapper {
     display: flex;
-    margin-top: 40px;
-    padding: 0 40px;
-    font-family: "Inconsolata", monospace;
+}
+.c-aboutus__nosotros {
+    position: relative;
+    width: 100%;
+}
+.c-aboutus__sobre h2,
+.c-aboutus__nosotros h2 {
+    text-align: right;
+}
+.c-aboutus__nosotros h2{
+    text-align: left;
+    place-self:start;
+    justify-items: flex-end;
+    justify-self: flex-end;
+}
+.c-aboutus .c-aboutus__sobre img{
+    width: 969px;
+}
+.c-aboutus__nosotros p {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: left;
+    font-size: 30px;
+    color: rgb(121, 121, 121);
+   justify-items: flex-end;
     
 }
 
-.c-about__wrapper > div{
-    height: 100vh;
-    place-content: center;
+.c-aboutus__nosotros {
+    margin-top: 200px;
+}
+
+.c-aboutus__arrow-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+.c-weoffer__caracteristics-wrapper {
+    display: grid;
+    align-items: center;
+    font-size: 24px;
+}
+
+.c-weoffer__wrapper-content {
+    display: flex;
+}
+
+.c-weoffer__image-container {
     position: relative;
 }
 
-.c-about__image{
-    position: sticky;
-    top: 10px;
-    align-self: flex-start;
-    background-image: url('../../public/bcafe.png');
+.c-weoffer__image-container .image {
+    width: 855px;
+    height: 800px;
+    position: relative;
+    background-image: url("../assets/images/weoffer.png");
+    background-position: center;
     background-size: cover;
-    
 }
 
-.filled, .outline{
+.filled,
+.outline {
     position: absolute;
-    top: 50%;
-    width: calc(100vw - 100px);
-    height: 400px;
-    background-image: url("../../public/Frame1.svg");
+    width: 855px;
+    height: 800px;
+    background-image: url("../assets/images/weofferc1.svg");
     background-repeat: no-repeat;
     background-position: center;
-    transform: translateY(-50%);
-    
+    top: 0;
 }
 
 .outline {
-    background-image: url("../../public/Frame2.svg");
+    background-image: url("../assets/images/weofferc2.svg");
     z-index: 999;
 }
 
-.filled1, .outline1{
+.some-products {
+    margin-bottom: 130px;
+    position: relative;
+}
+
+.some-products h2 {
+    width: 300px;
+}
+
+.some-products__items-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.some-products__item p {
+    font-size: 32px;
+}
+
+.some-products__img-item {
+    background-color: #E8E8E8;
+    width: 400px;
+    height: 450px;
+}
+
+.some-products__img-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.some-products__arrow-link {
     position: absolute;
-    top: 50%;
-    width: calc(100vw - 100px);
-    height: 400px;
-    background-image: url("../../public/Frame4.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: translateY(-50%);
+    bottom: -50px;
+    right: 30px;
+}
+
+
+/* Tabletas grandes y pantallas pequeñas */
+@media screen and (max-width: 1024px) {
+  
+}
+
+/* Tabletas */
+@media screen and (max-width: 768px) {
+   
+}
+
+/* Teléfonos móviles en modo paisaje */
+@media screen and (max-width: 576px) {
+   
+}
+
+/* Teléfonos móviles en modo retrato */
+@media screen and (max-width: 575px){
+    .c-home__wrapper {
+        display: block;
+        text-align: center;
+    }
+    .c-home__slogan-wrapper{
+        width: 100%;
+    }
+    .c-home__wrapper .c-home__image{
+        width: 100%;
+        display: block;
+    }
+    .c-home__image img{
+        width: 100%;
+    }
+
+    .c-home__logo {
+        width: 140px;
+        top: 10px;
+        left: 12px;
+    }
     
-}
-
-.outline1 {
-    background-image: url("../../public/Frame3.svg");
-    z-index: 999;
-}
-
-.c-about__caracteristics-wrapper div{
-   margin: 70px 0;
 }

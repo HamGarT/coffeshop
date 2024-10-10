@@ -4,14 +4,14 @@
 .c-navbar {
   height:50px;
   place-content: center;
-  width: 500px;
+  width: 600px;
   border-radius: 30px;
-  background-color: #ffffff;
   margin: 0 auto;
   text-align: center;
   box-shadow: var(--shadow-elevation-medium);
-  font-family:"Cabin", sans-serif;
   color: black;
+  border: 1px #000000 solid;
+  background-color: #ffffff;
    
 }
 .c-navbar ul {
@@ -29,9 +29,35 @@
 .c-navbar__item a{
     color: #000000;
     text-decoration: none;
+    letter-spacing: 4px;
+    font-size: 24px;
 }
 
 .c-navbar__item a:visited{
     
     color: black;
+}
+
+
+.c-navbar__item a:hover{
+    
+    color: rgb(255, 135, 55);
+}
+
+
+@media screen and (max-width: 576px) {
+    .c-navbar{
+        display: none;
+    }
+    .navbar-btn{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 10px;
+        top: 0;
+        font-size: 40px;
+        background: none;
+        border: none;
+        
+    }
 }

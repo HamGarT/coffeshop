@@ -1,0 +1,68 @@
+@import url('./general.css');
+
+h1 {
+    font-size: 300px;
+    letter-spacing: 100px;
+}
+
+.page-greeter {
+    width: 100%;
+    margin-top: 150px;
+    text-align: center;
+    z-index: 99999;
+}
+
+.gallery {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 150px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    position: relative;
+    
+}
+
+.outline,
+.filled {
+    position: fixed;
+    background-image: url("../assets/images/DONCOFFELLIOfiled.svg");
+    width: 800px;
+    height: 600px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 0;
+
+}
+
+.outline {
+    background-image: url("../assets/images/DONCOFFELLIOoutfile.svg");
+   
+    z-index: 999;
+}
+
+.gallery-item {
+    position: relative;
+    place-content: end;
+    display: inline;
+    margin-bottom: 80px;
+}
+
+.gallery-item p {
+    
+    font-size: 20px;
+    height: auto;
+    width: 400px;
+    text-align: left;
+    place-content: right;
+    display: block;
+    color: rgb(100, 100, 100);
+    
+}
+
+.gallery-item img {
+    width: clamp(300px, 700px, 900px);
+
+}

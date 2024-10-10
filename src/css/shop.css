@@ -18,9 +18,26 @@
 
 .c-products {
     padding: 40px 0;
-    
+    margin-top: 20px;
+}
+.c-page-greeter > div{
+    display: flex;
+    place-content: center;
+}
+.c-page-greeter h1{
+    font-size: 230px;
+    display: inline;
 }
 
+.c-page-greeter p{
+    font-size: 14px;
+    width: 550px;
+    place-self: end;
+    transform: translateY(-55px);
+    letter-spacing: 1px;
+    color: #727272;
+    text-align: center;
+}
 .c-products__grid-products {
     width: 80%;
     display: grid;
@@ -33,13 +50,6 @@
 
 }
 
-.c-banner {
-    height: 400px;
-    width: 100%;
-    background-image: url('../../public/homep2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 .coffee-item{
     padding-bottom: 50px;
     cursor: pointer;
