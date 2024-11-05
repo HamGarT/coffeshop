@@ -41,6 +41,9 @@
     left: 40px;
 }
 
+/*-----------------------------------------------------------------------------------*/
+
+
 .c-home {
     height: 100vh;
     margin-top: 0;
@@ -60,11 +63,6 @@
     width: 50%;
 
 }
-
-.c-home__slogan {
-    
-}
-
 
 .c-home__slogan h1 {
 
@@ -92,35 +90,40 @@
     width: 900px;
 }
 
+/*-----------------------------------------------------------------------------------*/
+.c-aboutus__nosotros-title--d1 {
+    display: none;
+}
+
 .c-aboutus__wrapper {
     display: flex;
 }
+
 .c-aboutus__nosotros {
     position: relative;
-    width: 100%;
 }
+
 .c-aboutus__sobre h2,
 .c-aboutus__nosotros h2 {
     text-align: right;
 }
-.c-aboutus__nosotros h2{
+
+.c-aboutus__nosotros h2 {
     text-align: left;
-    place-self:start;
-    justify-items: flex-end;
-    justify-self: flex-end;
+
 }
-.c-aboutus .c-aboutus__sobre img{
-    width: 969px;
+
+.c-aboutus .c-aboutus__sobre img {
+    max-width: 900px;
 }
+
 .c-aboutus__nosotros p {
-    position: absolute;
     width: 100%;
-    bottom: 0;
     text-align: left;
-    font-size: 30px;
+    padding-left: 10px;
     color: rgb(121, 121, 121);
-   justify-items: flex-end;
-    
+    justify-items: flex-end;
+
 }
 
 .c-aboutus__nosotros {
@@ -133,11 +136,11 @@
     right: 0;
 }
 
+/*-----------------------------------------------------------------------------------*/
 
 .c-weoffer__caracteristics-wrapper {
     display: grid;
     align-items: center;
-    font-size: 24px;
 }
 
 .c-weoffer__wrapper-content {
@@ -148,9 +151,17 @@
     position: relative;
 }
 
+.c-weoffer__wrapper-content p {
+    color: rgb(121, 121, 121);
+}
+
+.c-weoffer__p-align-top {
+    align-self: flex-start;
+}
+
 .c-weoffer__image-container .image {
     width: 855px;
-    height: 800px;
+    height: clamp(500px, 75vh, 900px);
     position: relative;
     background-image: url("../assets/images/weoffer.png");
     background-position: center;
@@ -161,7 +172,7 @@
 .outline {
     position: absolute;
     width: 855px;
-    height: 800px;
+    height: clamp(500px, 60vh, 900px);
     background-image: url("../assets/images/weofferc1.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -172,6 +183,9 @@
     background-image: url("../assets/images/weofferc2.svg");
     z-index: 999;
 }
+
+/*-----------------------------------------------------------------------------------*/
+
 
 .some-products {
     margin-bottom: 130px;
@@ -185,6 +199,8 @@
 .some-products__items-wrapper {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
 }
 
 .some-products__item p {
@@ -195,6 +211,7 @@
     background-color: #E8E8E8;
     width: 400px;
     height: 450px;
+    margin: auto;
 }
 
 .some-products__img-item img {
@@ -211,35 +228,35 @@
 
 
 /* Tabletas grandes y pantallas pequeñas */
-@media screen and (max-width: 1024px) {
-  
-}
+@media screen and (max-width: 1024px) {}
 
 /* Tabletas */
-@media screen and (max-width: 768px) {
-   
-}
-
-/* Teléfonos móviles en modo paisaje */
-@media screen and (max-width: 576px) {
-   
-}
+@media screen and (max-width: 768px) {}
 
 /* Teléfonos móviles en modo retrato */
-@media screen and (max-width: 575px){
+@media screen and (max-width: 920px) {
+
+    .c-home{
+        height: auto;
+    }
+    
     .c-home__wrapper {
         display: block;
         text-align: center;
     }
-    .c-home__slogan-wrapper{
+
+    .c-home__slogan-wrapper {
         width: 100%;
     }
-    .c-home__wrapper .c-home__image{
+
+    .c-home__wrapper .c-home__image {
         width: 100%;
         display: block;
     }
-    .c-home__image img{
+
+    .c-home__image img {
         width: 100%;
+        display: block;
     }
 
     .c-home__logo {
@@ -247,5 +264,81 @@
         top: 10px;
         left: 12px;
     }
+
+    .c-aboutus {
+        margin-top: 100px;
+    }
+
+    .c-aboutus__wrapper {
+        display: block;
+    }
+
+    .c-aboutus__nosotros {
+        margin-top: 10px;
+        padding-bottom: 70px;
+    }
+
+    .c-aboutus__nosotros-title--d1 {
+        display: block;
+    }
+
+    .c-aboutus__nosotros-title--d2 {
+        display: none;
+    }
+
+    .c-aboutus .c-aboutus__sobre img {
+        width: 100%;
+        place-self: center;
+    }
+
+    .c-aboutus__sobre h2 {
+        text-align: left;
+    }
+
+    .c-weoffer__wrapper-content{
+        display: block;
+    }
+
     
+    .c-weoffer__image-container .image {
+        width: 100%;
+        background-size:contain;
+        background-repeat: no-repeat;
+    }
+    .filled,
+    .outline {
+        width: 100%;
+        background-size:contain;
+    }
+
+    .c-weoffer__caracteristics-wrapper p{
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .some-products__items-wrapper{
+        justify-content: center;
+    }
+    .some-products__item{
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 415px){
+    .some-products__img-item {
+        background-color: #E8E8E8;
+        width: 300px;
+        height: 350px;
+        margin: auto;
+    }
+
+    .some-products__item{
+        margin-top: 40px;
+    }
+
+    .c-weoffer__image-container .image,
+    .filled,
+    .outline {
+        height: 400px;
+    }
 }
