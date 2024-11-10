@@ -48,7 +48,6 @@
     height: 100vh;
     margin-top: 0;
     place-content: center;
-
 }
 
 .c-home__wrapper {
@@ -166,6 +165,18 @@
     background-image: url("../assets/images/weoffer.png");
     background-position: center;
     background-size: cover;
+    position: relative;
+}
+
+.c-weoffer__image-container .image::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 170, 59, 0.253);
+    position: absolute;
+    top: 0;
+    clip-path: circle(50% at 50% 50%);
+    z-index: -1;
 }
 
 .filled,

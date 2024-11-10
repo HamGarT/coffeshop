@@ -1,7 +1,7 @@
 @import url('./general.css');
 
 h1 {
-    font-size: 300px;
+    font-size: clamp(1.5rem, calc(5vw + 1rem), 3rem);
     letter-spacing: 100px;
 }
 
@@ -21,6 +21,7 @@ h1 {
     flex-wrap: wrap;
     margin-bottom: 20px;
     position: relative;
+    margin: auto;
     
 }
 
@@ -63,6 +64,9 @@ h1 {
 }
 
 .gallery-item img {
-    width: clamp(300px, 700px, 900px);
+    width: clamp(100px, 100%, 700px);
 
+}
+
+@media screen and (max-width: 920px) {
 }

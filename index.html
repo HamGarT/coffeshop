@@ -109,35 +109,6 @@
   </section>
   <footer id="footer-container"></footer>
   <script src="./src/js/components.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-
-      const handleScroll = () => {
-        const navbar = document.getElementById('navbar-container');
-        if (navbar) {
-          if (window.scrollY >= 100) {
-            navbar.classList.add('sticky');
-          } else {
-            navbar.classList.remove('sticky');
-          }
-        }
-      };
-
-      let isThrottled = false;
-      window.addEventListener('scroll', () => {
-        if (!isThrottled) {
-          handleScroll();
-          isThrottled = true;
-          setTimeout(() => {
-            isThrottled = false;
-          }, 100);
-        }
-      });
-    });
-  </script>
-
-
-
 </body>
 
 </html>
