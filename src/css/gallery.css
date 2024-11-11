@@ -1,20 +1,21 @@
 @import url('./general.css');
 
-h1 {
-    font-size: clamp(1.5rem, calc(5vw + 1rem), 3rem);
-    letter-spacing: 100px;
+
+h2 {
+    font-size: clamp(80px, calc(15vw + 1rem), 310px);
+    letter-spacing: clamp(15px, calc(2vw * 2.5), 100px);
 }
 
 .page-greeter {
     width: 100%;
-    margin-top: 150px;
+    margin-top: min(150px, 20%);
     text-align: center;
     z-index: 99999;
 }
 
 .gallery {
     display: flex;
-    width: 100%;
+    width: 90%;
     height: 100%;
     justify-content: space-evenly;
     margin-bottom: 150px;
@@ -29,7 +30,9 @@ h1 {
 .filled {
     position: fixed;
     background-image: url("../assets/images/DONCOFFELLIOfiled.svg");
-    width: 800px;
+    /* width: 800px;
+    height: 600px; */
+    width: clamp(200px, 90vw, 800px);
     height: 600px;
     background-position: center;
     background-size: contain;
@@ -55,7 +58,7 @@ h1 {
     
     font-size: 20px;
     height: auto;
-    width: 400px;
+    width: 340px;
     text-align: left;
     place-content: right;
     display: block;
@@ -64,9 +67,6 @@ h1 {
 }
 
 .gallery-item img {
-    width: clamp(100px, 100%, 700px);
-
-}
-
-@media screen and (max-width: 920px) {
+    width: clamp(340px, calc(60vw + 1rem), 710px);
+    
 }

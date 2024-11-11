@@ -1,16 +1,16 @@
 @import url('./general.css');
 
 .overlay {
-    display: none; 
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
-    backdrop-filter: blur(5px); 
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
     z-index: 99;
-} 
+}
 
 .show {
     display: block;
@@ -20,16 +20,22 @@
     padding: 40px 0;
     margin-top: 20px;
 }
-.c-page-greeter > div{
+
+.c-page-greeter {
+    margin-top: 150px;
+}
+
+.c-page-greeter>div {
     display: flex;
     place-content: center;
 }
-.c-page-greeter h1{
-    font-size: 230px;
+
+.c-page-greeter h1 {
+    font-size: clamp(80px, calc(15vw + 1rem), 210px);
     display: inline;
 }
 
-.c-page-greeter p{
+.c-page-greeter p {
     font-size: 14px;
     width: 550px;
     place-self: end;
@@ -38,22 +44,22 @@
     color: #727272;
     text-align: center;
 }
+
 .c-products__grid-products {
     width: 80%;
     display: grid;
     min-height: 100vh;
-    grid-template-columns: repeat(3, 1fr);   
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin: auto;
     justify-items: center;
-   
-
 }
 
-.coffee-item{
+.coffee-item {
     padding-bottom: 50px;
     cursor: pointer;
 }
+
 .coffee-item img {
     height: 500px;
     width: 400px;
@@ -68,7 +74,7 @@
 }
 
 
-.c-products__buy-modal{
+.c-products__buy-modal {
     padding: 40px 40px 80px 40px;
     position: fixed;
     top: 50%;
@@ -76,29 +82,34 @@
     transform: translate(-50%, -50%);
     background-color: #fdfdfd;
     width: 60%;
+    height: auto;
     display: none;
     z-index: 999;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    
-}
-.c-products__images-wrapper{
-    padding: 0 20px;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
-.c-products__buy-modal .image{
+.c-products__buy-modal .image {
     width: 500px;
     height: 400px;
     background-color: rgb(243, 243, 243);
 }
-.c-products__buy-modal img{
-    padding: 0 10px;
+
+.c-products__buy-modal img {
+   
     width: 500px;
     height: 400px;
 }
 
-.c-products__info-wrapper > p{
+
+.c-products__info-wrapper {
+    margin-left: 30px;
+}
+
+.c-products__info-wrapper>p {
     padding: 20px 0;
-    
+
 }
 
 .c-products__buttons {
@@ -108,7 +119,7 @@
     justify-content: space-around;
 }
 
-.c-products__button-item{
+.c-products__button-item {
     padding: 20px 40px;
     background-color: #ffff;
     border: 2px solid #000;
@@ -119,27 +130,36 @@
     border-radius: 0px;
     transition: background-color 1s;
 }
-.c-products__button-item:hover{
+
+.c-products__button-item:hover {
     background-color: #000000;
     color: #ffffff;
 }
-.c-products__button-item--black{
+
+.c-products__button-item--black {
     background-color: #000000;
     color: #ffffff;
 }
-.c-products__button-item--black:hover{
+
+.c-products__button-item--black:hover {
     background-color: #fdfdfd;
     color: #000000;
-    
+
 }
-.c-products__stars{
+
+.c-products__stars {
     margin-top: 10px;
 }
 
-.c-products__lastly-viewed{
+.c-products__lastly-viewed {
+    margin-top: 20px;
+}
+
+.c-products__lastly-viewed-wrapper {
     display: flex;
 }
-.c-products__lastly-viewed-item{
+
+.c-products__lastly-viewed-item {
     height: 100px;
     width: 150px;
     background-color: rgb(243, 243, 243);
@@ -148,13 +168,72 @@
     cursor: pointer;
 }
 
-.c-products__lastly-viewed-item img{
+.c-products__lastly-viewed-item img {
     width: 100%;
     height: 100%;
 }
-.c-products__lastly-viewed span{
+
+.c-products__lastly-viewed span {
     display: inline;
+    font-size: 15px;
 }
-.c-products__acordion{
-    margin-top: 20px ;
+
+.c-products__acordion {
+    margin-top: 20px;
+}
+
+.c-products__button-item {
+    display: inline-block;
+}
+
+@media screen and (max-width: 1380px) {
+    .c-page-greeter {
+        margin-top: 50px;
+    }
+    .c-products__grid-products {
+        margin: auto;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .c-products__buy-modal {
+        flex-wrap: wrap;
+    }
+    .c-products__images-wrapper .image img,
+    .c-products__images-wrapper .image {
+        width: clamp(200px, 100%, 700px);
+        height: clamp(200px, 100%, 700px);
+    }
+    .c-products__lastly-viewed {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 920px) {
+    .c-products__grid-products {
+        margin: auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .c-products__info-wrapper {
+        margin: 50px 0;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .c-products__buy-modal {
+        flex-wrap: wrap;
+        width: 90%;
+        height: 600px;
+    }
+    .coffee-item img {
+        height: 350px;
+        width: 300px;
+    }
+    .c-page-greeter div {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .c-page-greeter div p {
+        transform: none;
+
+    }
 }

@@ -21,4 +21,5 @@
       -24.9px 28.2px 42.3px -1.9px hsl(var(--shadow-color) / 0.27),
       -34.3px 38.8px 58.3px -2.2px hsl(var(--shadow-color) / 0.27),
       -46.2px 52.2px 78.4px -2.5px hsl(var(--shadow-color) / 0.27);
+      --swiper-navigation-color: #00000;
   }

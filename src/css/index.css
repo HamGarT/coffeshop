@@ -237,14 +237,6 @@
     right: 30px;
 }
 
-
-/* Tabletas grandes y pantallas pequeñas */
-@media screen and (max-width: 1024px) {}
-
-/* Tabletas */
-@media screen and (max-width: 768px) {}
-
-/* Teléfonos móviles en modo retrato */
 @media screen and (max-width: 920px) {
 
     .c-home{

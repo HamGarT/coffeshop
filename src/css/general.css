@@ -56,6 +56,14 @@ h3{
     width: 100%;
 }
 
+.c-logo {
+    position: absolute;
+    width: 250px;
+    top: 10px;
+    left: 40px;
+
+}
+
 /* Tabletas grandes y pantallas pequeñas */
 @media screen and (max-width: 1024px) {
     body {
@@ -63,11 +71,16 @@ h3{
     }
 
     h1 {
-        font-size: 180px;
+        font-size: 10px;
     }
 
     h2 {
         font-size: 140px;
+    }
+    .c-logo {
+        width: 140px;
+        top: 10px;
+        left: 12px;
     }
 }
 

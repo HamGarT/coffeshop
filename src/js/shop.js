@@ -2,101 +2,103 @@ const modalBuyWrapper = document.getElementById('c-products__modal');
 const overlay = document.getElementById('overlay');
 
 async function fetchData() {
-    try {
-        const response = await fetch("https://fake-coffee-api.vercel.app/api?limit=9");
-        const data = await response.json();
-        console.log(data);
-        return data;
-    } catch (error) {
-        console.error("Error fetching data:", error);
-    }
+  try {
+    const response = await fetch("https://fake-coffee-api.vercel.app/api?limit=9");
+    const data = await response.json();
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
 }
 
 const generateHTML = (data) => {
-    const container = document.getElementById('c-products__coffee-list');
-    container.innerHTML = '';
+  const container = document.getElementById('c-products__coffee-list');
+  container.innerHTML = '';
 
-    data.forEach(item => {
-        let image_url = item.image_url;
-        let name = item.name;
-        let price = item.price;
-        let description = item.description;
-        let region = item.region;
-        let weight = item.weight;
-        let flavors = item.flavor_profile;
-        let grindOption = item.grind_option;
-
-
-        const coffeeItemHtml = document.createElement('div');
-        coffeeItemHtml.classList.add('coffee-item');
-
-        const imgCoffeHtml = document.createElement('img');
-        imgCoffeHtml.src = image_url;
-        coffeeItemHtml.appendChild(imgCoffeHtml);
-
-        const titleHtml = document.createElement('h3');
-        titleHtml.textContent = name;
-        coffeeItemHtml.appendChild(titleHtml);
-
-        const priceHtml = document.createElement('span');
-        priceHtml.textContent = `S/.${price}`;
-        coffeeItemHtml.appendChild(priceHtml);
-        container.appendChild(coffeeItemHtml);
+  data.forEach(item => {
+    let image_url = item.image_url;
+    let name = item.name;
+    let price = item.price;
+    let description = item.description;
+    let region = item.region;
+    let weight = item.weight;
+    let flavors = item.flavor_profile;
+    let grindOption = item.grind_option;
 
 
-        coffeeItemHtml.addEventListener("click", () => {
-            modalBuyWrapper.innerHTML = modalBuyHtml({
-                image_url,
-                name,
-                price,
-                description,
-                region,
-                weight,
-                flavors,
-                grindOption,
-            });
-            modalBuyWrapper.style.display = "flex";
-            overlay.classList.add('show');
-        })
-    });
+    const coffeeItemHtml = document.createElement('div');
+    coffeeItemHtml.classList.add('coffee-item');
+
+    const imgCoffeHtml = document.createElement('img');
+    imgCoffeHtml.src = image_url;
+    coffeeItemHtml.appendChild(imgCoffeHtml);
+
+    const titleHtml = document.createElement('h3');
+    titleHtml.textContent = name;
+    coffeeItemHtml.appendChild(titleHtml);
+
+    const priceHtml = document.createElement('span');
+    priceHtml.textContent = `S/.${price}`;
+    coffeeItemHtml.appendChild(priceHtml);
+    container.appendChild(coffeeItemHtml);
+
+
+    coffeeItemHtml.addEventListener("click", () => {
+      modalBuyWrapper.innerHTML = modalBuyHtml({
+        image_url,
+        name,
+        price,
+        description,
+        region,
+        weight,
+        flavors,
+        grindOption,
+      });
+      modalBuyWrapper.style.display = "flex";
+      overlay.classList.add('show');
+    })
+  });
 }
 overlay.addEventListener('click', () => {
-    modalBuyWrapper.style.display = 'none';
-    overlay.classList.remove('show');
+  modalBuyWrapper.style.display = 'none';
+  overlay.classList.remove('show');
 });
 
 
 const modalBuyHtml = (content) => {
-    return (
-        `
+  return (
+    `
             <div class="c-products__images-wrapper">
                 <div class="image">
                     <img src="${content.image_url}" alt="" srcset="">
                 </div>
-                <h4>Ultimos vistos</h4>
+                
                 <div class="c-products__lastly-viewed">
+                  <h4>Ultimos vistos</h4>
+                  <div class="c-products__lastly-viewed-wrapper">
                     <div class="c-products__lastly-viewed-item">
                         <img src="https://iili.io/H8Y7lpV.webp" alt="" srcset="">
                         <div>
                             <span>Breezy Beans</span>
-                            <span>S/.12</span>
+                        
                         </div>
                     </div>
                     <div class="c-products__lastly-viewed-item">
                         <img src="https://iili.io/H8Y7wYv.webp" alt="" srcset="">
                         <div>
                             <span>Indo-Viet Roast</span>
-                            <span>S/.13.99</span>
+                            
                         </div>
                     </div>
                     <div class="c-products__lastly-viewed-item">
                         <img src="https://iili.io/H8Y7VCF.webp" alt="" srcset="">
                         <div>
                             <span>Ethiopian Yirgacheffe</span>
-                            <span>S/.12.99</span>
+                            
                         </div>
                     </div>
-                    
+                  </div>
                 </div>
             </div>
             <div class="c-products__info-wrapper">
@@ -161,9 +163,9 @@ const modalBuyHtml = (content) => {
                 </div>
             </div>
         `
-    )
+  )
 }
 
 fetchData().then(data => {
-    generateHTML(data);
+  generateHTML(data);
 });
